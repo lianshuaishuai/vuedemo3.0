@@ -1,0 +1,68 @@
+html,body   {width:100%; height:100%}
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+:root {
+    --sat: env(safe-area-inset-top);
+    --sar: env(safe-area-inset-right);
+    --sab: env(safe-area-inset-bottom);
+    --sal: env(safe-area-inset-left);
+}
+// 文本展示两行
+.two-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+// 文本一行
+.one-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+// 清除浮动
+.clear:after {
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+// 兼容ie6 ie7
+.clear {
+  zoom: 1;
+}
+// 隐藏滚动条
+.hide-scrollbar{
+  //隐藏滚动条
+  scrollbar-width: none; /* firefox */
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none; /* Chrome Safari */
+  }
+}
+.safe-bottom {
+  padding-bottom: constant(safe-area-inset-bottom); /* 兼容 iOS < 11.2 */
+  padding-bottom: env(safe-area-inset-bottom); /* 兼容 iOS >= 11.2 */
+}
+.safe-top {
+  padding-bottom: constant(safe-area-inset-top); /* 兼容 iOS < 11.2 */
+  padding-bottom: env(safe-area-inset-top); /* 兼容 iOS >= 11.2 */
+}
+p, h4 {
+  margin: 0;
+}
+// 距离左边
+.text-left {
+  text-align: left;
+}
+// 数字换行
+.number-wrap {
+  word-break: break-all;
+}
