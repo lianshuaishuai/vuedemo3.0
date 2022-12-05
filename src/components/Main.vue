@@ -53,6 +53,7 @@ export default {
     const router = useRouter();
     const route = useRoute()
     onMounted(()=>{
+      // 进入首页
       if (route.fullPath === "/") { router.replace({path:'/home'}) }
     })
     return {
