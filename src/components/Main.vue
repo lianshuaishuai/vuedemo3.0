@@ -57,7 +57,6 @@ export default {
     })
     return {
       // 底部图标配置以及选中状态
-      
       ...mainSetting,
     };
   },
