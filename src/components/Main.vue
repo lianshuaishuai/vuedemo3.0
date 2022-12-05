@@ -53,9 +53,7 @@ export default {
     const router = useRouter();
     const route = useRoute()
     onMounted(()=>{
-      if (route.fullPath === "/") {
-          router.replace({path:'/home'})
-      }
+      if (route.fullPath === "/") { router.replace({path:'/home'}) }
     })
     return {
       // 底部图标配置以及选中状态
