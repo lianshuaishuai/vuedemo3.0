@@ -7,6 +7,7 @@
       src="https://cdn.jsdelivr.net/npm/@vant/assets/cat.jpeg"
       fit="cover"
       @click="showDiv"
+    
     />
     <!-- 活动标题 截止时间 地址等 -->
     <div class="single-info">

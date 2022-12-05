@@ -38,9 +38,10 @@
 </template>
 <script>
 import { Tabbar, TabbarItem } from "vant";
-import {useRouter } from "vue-router";
+// import {useRouter } from "vue-router";
 import mainSetting from "../hook/mainsetting";
 import { onMounted } from '@vue/runtime-core';
+import { useRoute, useRouter } from 'vue-router';
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Main",
@@ -49,11 +50,12 @@ export default {
     "van-tabbar-item": TabbarItem,
   },
   setup() {
-    const route = useRouter();
-    console.log(0);
-    console.log(route);
+    const router = useRouter();
+    const route = useRoute()
     onMounted(()=>{
-      route.replace({path:'/home'})
+      if (route.fullPath === "/") {
+          router.replace({path:'/home'})
+      }
     })
     return {
       // 底部图标配置以及选中状态

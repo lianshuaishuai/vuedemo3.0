@@ -25,18 +25,8 @@ const router = createRouter({
     ], 
   })
 
- router.beforeEach((to, from)=>{
-    console.log('hhhh');
-    console.log(window.history);
-    console.log(to);
-    console.log(from);
-    // console.log(next);
-    console.log(router.getRoutes());
-    if (window.history.state.back) {
-        console.log('我可以后退');
-    }
-    if (window.history.state.forward) {
-        console.log('我可以前进');
-    }
- })
+//  router.beforeEach((to, from)=>{
+ 
+   
+//  })
   export default router
