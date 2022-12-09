@@ -4,7 +4,7 @@ import main from './main'
 // 帖子详情 
 import postdetail from './postsdetail'
 //个人中心
-import personalcenter from './personalcenter'
+import personal from './personalcenter'
 // 公告列表
 import topicList from './topicList'
 // 论坛列表
@@ -18,7 +18,7 @@ const router = createRouter({
     routes:[
         main,
         postdetail,
-        personalcenter,
+        ...personal,
         topicList,
         forumList,
         activityDetail
